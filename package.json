@@ -20,11 +20,13 @@
   },
   "homepage": "https://oden6680.github.io/react-tutorial/",
   "dependencies": {
-    "bulma": "^0.8.2",
+    "bulma": "^0.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-twitter-embed": "^3.0.3",
+    "react-twitter-embedded-timeline": "^0.5.1"
   },
   "devDependencies": {
     "gh-pages": "^3.0.0",
