@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "start": "react-scripts start"
   },
@@ -17,12 +18,16 @@
   "bugs": {
     "url": "https://github.com/oden6680/react-tutorial/issues"
   },
+  "homepage": "https://oden6680.github.io/react-tutorial/",
   "dependencies": {
     "bulma": "^0.8.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "gh-pages": "^3.0.0",
     "react-scripts": "^3.4.1"
   },
   "browserslist": {
