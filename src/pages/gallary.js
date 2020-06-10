@@ -54,7 +54,7 @@ const Gallary = () => {
             <p>These are my favorite pictures.</p>
             </div>
             <br></br>
-            <ImageGallery items={images} />
+            <ImageGallery items = {images} disableSwipe = {true} autoPlay = {true} />
         </section>
     )
 }

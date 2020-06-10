@@ -7,6 +7,18 @@ import Blog from "./pages/blog";
 import Gallary from "./pages/gallary";
 import Profile from "./pages/profile";
 
+import Hokkaido from "./pages/blog/japan/hokkaido_tohoku/hokkaido";
+import Fukushima from "./pages/blog/japan/hokkaido_tohoku/fukushima";
+import Tokyo from "./pages/blog/japan/kanto/tokyo";
+import Shizuoka from "./pages/blog/japan/tyubu/shizuoka";
+import Nagano from "./pages/blog/japan/tyubu/nagano";
+
+import Minsk from "./pages/blog/belarus/minsk";
+import Grodna from "./pages/blog/belarus/grodna";
+import Brest from "./pages/blog/belarus/brest";
+
+import Notfound from "./pages/blog/nonedeta";
+
 const TabLink = ({ to, children, exact }) => (
   <Route
     path = {to}
@@ -53,6 +65,63 @@ const App = () => {
             <Route exact path = "/blog" component = {Blog}/>
             <Route exact path = "/gallary" component = {Gallary}/>
             <Route exact path = "/profile" component = {Profile}/>
+
+            <Route exact path = "/blog/hokkaido" component = {Hokkaido}/>
+            <Route exact path = "/blog/aomori" component = {Notfound}/>
+            <Route exact path = "/blog/akita" component = {Notfound}/>
+            <Route exact path = "/blog/iwate" component = {Notfound}/>
+            <Route exact path = "/blog/yamagata" component = {Notfound}/>
+            <Route exact path = "/blog/miyagi" component = {Notfound}/>
+            <Route exact path = "/blog/fukushima" component = {Fukushima}/>
+
+            <Route exact path = "/blog/gunma" component = {Notfound}/>
+            <Route exact path = "/blog/tochigi" component = {Notfound}/>
+            <Route exact path = "/blog/ibaraki" component = {Notfound}/>
+            <Route exact path = "/blog/saitama" component = {Notfound}/>
+            <Route exact path = "/blog/tokyo" component = {Tokyo}/>
+            <Route exact path = "/blog/chiba" component = {Notfound}/>
+            <Route exact path = "/blog/kanagawa" component = {Notfound}/>
+
+            <Route exact path = "/blog/nigata" component = {Notfound}/>
+            <Route exact path = "/blog/shizuoka" component = {Shizuoka}/>
+            <Route exact path = "/blog/yamanashi" component = {Notfound}/>
+            <Route exact path = "/blog/nagano" component = {Nagano}/>
+            <Route exact path = "/blog/toyama" component = {Notfound}/>
+            <Route exact path = "/blog/ishikawa" component = {Notfound}/>
+            <Route exact path = "/blog/fukui" component = {Notfound}/>
+            <Route exact path = "/blog/gifu" component = {Notfound}/>
+            <Route exact path = "/blog/aichi" component = {Notfound}/>
+
+            <Route exact path = "/blog/osaka" component = {Notfound}/>
+            <Route exact path = "/blog/kyoto" component = {Notfound}/>
+            <Route exact path = "/blog/nara" component = {Notfound}/>
+            <Route exact path = "/blog/mie" component = {Notfound}/>
+            <Route exact path = "/blog/wakayama" component = {Notfound}/>
+            <Route exact path = "/blog/shiga" component = {Notfound}/>
+            <Route exact path = "/blog/hyogo" component = {Notfound}/>
+
+            <Route exact path = "/blog/totori" component = {Notfound}/>
+            <Route exact path = "/blog/shimane" component = {Notfound}/>
+            <Route exact path = "/blog/hiroshima" component = {Notfound}/>
+            <Route exact path = "/blog/okayama" component = {Notfound}/>
+            <Route exact path = "/blog/yamaguchi" component = {Notfound}/>
+            <Route exact path = "/blog/kagawa" component = {Notfound}/>
+            <Route exact path = "/blog/tokushima" component = {Notfound}/>
+            <Route exact path = "/blog/ehime" component = {Notfound}/>
+            <Route exact path = "/blog/kochi" component = {Notfound}/>
+
+            <Route exact path = "/blog/fukuoka" component = {Notfound}/>
+            <Route exact path = "/blog/nagasaki" component = {Notfound}/>
+            <Route exact path = "/blog/kagoshima" component = {Notfound}/>
+            <Route exact path = "/blog/kumamoto" component = {Notfound}/>
+            <Route exact path = "/blog/saga" component = {Notfound}/>
+            <Route exact path = "/blog/oita" component = {Notfound}/>
+            <Route exact path = "/blog/miyazaki" component = {Notfound}/>
+            <Route exact path = "/blog/okinawa" component = {Notfound}/>
+
+            <Route exact path = "/blog/minsk" component = {Minsk}/>
+            <Route exact path = "/blog/grodna" component = {Grodna}/>
+            <Route exact path = "/blog/brest" component = {Brest}/>
           </Switch>
         </div>
       </section>  
