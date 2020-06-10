@@ -4,17 +4,17 @@ import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import logo from "./images/head.jpeg";
 import Top from "./pages/top";
 import Blog from "./pages/blog";
-import Twitter from "./pages/twitter";
+import Gallary from "./pages/gallary";
 import Profile from "./pages/profile";
 
 const TabLink = ({ to, children, exact }) => (
   <Route
-    path={to}
-    exact={exact}
-    children={({ match }) => {
+    path = {to}
+    exact = {exact}
+    children = {({ match }) => {
       return (
-        <li className={match ? 'is-active' : ''}>
-          <Link to={to} style={{ color: match ? 'rgb(32,88,90)' : 'white' }}>
+        <li className = {match ? 'is-active' : ''}>
+          <Link to = {to} style = {{ color: match ? 'rgb(32,88,90)' : 'white' }}>
             {children}
           </Link>
         </li>
@@ -38,7 +38,7 @@ const App = () => {
                 <ul>
                   <TabLink to = '/' exact>Top</TabLink>
                   <TabLink to = '/blog'>Blog</TabLink>
-                  <TabLink to = '/twitter'>Twitter</TabLink>
+                  <TabLink to = '/gallary'>Gallary</TabLink>
                   <TabLink to = '/profile'>Profile</TabLink>
                 </ul>
               </div>
@@ -51,7 +51,7 @@ const App = () => {
           <Switch>
             <Route exact path = "/" component = {Top}/>
             <Route exact path = "/blog" component = {Blog}/>
-            <Route exact path = "/twitter" component = {Twitter}/>
+            <Route exact path = "/gallary" component = {Gallary}/>
             <Route exact path = "/profile" component = {Profile}/>
           </Switch>
         </div>

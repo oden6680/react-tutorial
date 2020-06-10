@@ -18,7 +18,7 @@ const Profile = props => (
                     <h1 className = "title">織田尚哉</h1>
                 </div>
 
-                <div className = 'column is-4'>
+                <div className = 'column is-3'>
                     <div className = 'content'>
                     <h2>Links</h2>
                     </div>
@@ -46,10 +46,10 @@ const Profile = props => (
                             <a href ='http://www.nihon-u.ac.jp/' target = "_blank" rel = "noopener noreferrer">Nihon University</a>
                         </li>
                         <li>
-                            <a href ='https://www.chs.nihon-u.ac.jp/' target = "_blank" rel = "noopener noreferrer">Nihon University,CHS</a>
+                            <a href ='https://www.chs.nihon-u.ac.jp/' target = "_blank" rel = "noopener noreferrer">CHS</a>
                         </li>
                         <li>
-                            <a href ='http://www.is.chs.nihon-u.ac.jp/' target = "_blank" rel = "noopener noreferrer">CHS,Information Science</a>
+                            <a href ='http://www.is.chs.nihon-u.ac.jp/' target = "_blank" rel = "noopener noreferrer">Information Science</a>
                         </li>
                         <li>
                             <a href ='https://vdslab.jp/' target = "_blank" rel = "noopener noreferrer">vdslab</a>

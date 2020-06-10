@@ -5,12 +5,20 @@ import Belarus from "../images/belarus.png";
 const Blog = props => (
     <section className = "section">
         <div className = "container">
-        <h1 className = "title">Japan</h1>
+        <h1 className = "title">About</h1>
+        <p>
+            This is a page of places I've traveled to, with my thoughts on them. I hope my articles will help you with your future travels.
+        </p>
+        <br></br>
+        </div>
+
+        <div className = "container">
+        <h3 className = "title">Japan</h3>
             <div className = "columns">
                 <div className = "column is-2">
                     <div className = "menu">
                         <ul className = "menu-list">
-                            <li><a>Hokkaido/Tohoku</a>
+                            <li>Hokkaido/Tohoku
                                 <ul>
                                     <li><a>Hokkaido</a></li>
                                     <li><a>Aomori</a></li>
@@ -28,7 +36,7 @@ const Blog = props => (
                 <div className = "column is-2">
                     <div className = "menu">
                         <ul className = "menu-list">
-                            <li><a>Kanto</a>
+                            <li>Kanto
                                 <ul>
                                     <li><a>Tochigi</a></li>
                                     <li><a>Gunma</a></li>
@@ -46,7 +54,7 @@ const Blog = props => (
                 <div className = "column is-2">
                     <div className = "menu">
                         <ul className = "menu-list">
-                            <li><a>Tyubu</a>
+                            <li>Tyubu
                                 <ul>
                                     <li><a>Nigata</a></li>
                                     <li><a>Nagano</a></li>
@@ -66,7 +74,7 @@ const Blog = props => (
                 <div className = "column is-2">
                     <div className = "menu">
                         <ul className = "menu-list">
-                            <li><a>Kansai</a>
+                            <li>Kansai
                                 <ul>
                                     <li><a>Osaka</a></li>
                                     <li><a>Kyoto</a></li>
@@ -84,7 +92,7 @@ const Blog = props => (
                 <div className = "column is-2">
                     <div className = "menu">
                         <ul className = "menu-list">
-                            <li><a>Tyugoku/Shikoku</a>
+                            <li>Tyugoku/Shikoku
                                 <ul>
                                     <li><a>Totori</a></li>
                                     <li><a>Shimane</a></li>
@@ -104,7 +112,7 @@ const Blog = props => (
                 <div className = "column is-2">
                     <div className = "menu">
                         <ul className = "menu-list">
-                            <li><a>Kyushu/Okinawa</a>
+                            <li>Kyushu/Okinawa
                                 <ul>
                                     <li><a>Fukuoka</a></li>
                                     <li><a>Nagasaki</a></li>
@@ -121,12 +129,12 @@ const Blog = props => (
                 </div>
             </div>
 
-            <h1 className = "title">Abroad</h1>
+            <h3 className = "title">Abroad</h3>
             <div className = "columns">
                 <div className = "column is-2">
                     <div className = "menu">
                         <ul className = "menu-list">
-                            <li><a>Belarus</a>
+                            <li>Belarus
                                 <ul>
                                     <li><a>Minsk</a></li>
                                     <li><a>Grodna</a></li>
@@ -138,7 +146,10 @@ const Blog = props => (
                 </div>
             </div>
             <hr></hr>
-            <div className = 'content has-text-centered'>
+
+            <div className = "content has-text-centered">
+                <h1 className = "title">MAP</h1>
+                <h2 className = "subtitle has-text-danger-dark">Visited areas are painted in green</h2>
                 <img src = {Japan} width = "50%" height = "50%" alt = "Japan"></img>
                 <img src = {Belarus} width = "50%" height = "50%" alt = "Belarus"></img>
             </div>
