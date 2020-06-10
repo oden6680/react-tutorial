@@ -3,7 +3,7 @@ import ImageGallery from 'react-image-gallery';
 
 import Brest from "../images/BS001.JPG";
 import Minsk from "../images/MS001.JPG";
-import Grodno from "../images/GD001.jpeg";
+import Grodna from "../images/GD001.jpeg";
 import Hokkaido from "../images/HK001.JPG";
 import Fukushima from "../images/FK001.JPG";
 import Tokyo from "../images/TK001.JPG";
@@ -12,7 +12,7 @@ import Nagano from "../images/NG001.JPG";
 
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const Gallary = () => {
+const Gallery = () => {
     const images = [
         {
           original: Brest,
@@ -23,8 +23,8 @@ const Gallary = () => {
           thumbnail: Minsk,
         },
         {
-          original: Grodno,
-          thumbnail: Grodno,
+          original: Grodna,
+          thumbnail: Grodna,
         },
         {
           original: Hokkaido,
@@ -59,4 +59,4 @@ const Gallary = () => {
     )
 }
   
-export default Gallary
+export default Gallery

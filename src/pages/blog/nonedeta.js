@@ -16,8 +16,8 @@ const Notfound = props => {
         <div className = "container has-text-centered is-size-1">
             <h2>404 Not Found</h2>
                 <p className = "container is-size-3">
-                    Sorry,this page does not exist.<br></br>
-                    This can be caused by the following.
+                    Sorry, this page does not exist.<br></br>
+                    This can be caused by the following reasons.
                 </p>
             </div>
             <br></br>
@@ -37,7 +37,7 @@ const Notfound = props => {
                 <br></br>
                 <li>The URL of the page may have changed.</li><br></br>
                 <li>The page may have been deleted.</li><br></br>
-                <li>It's possible that you have the wrong URL.</li>
+                <li>It's possible that you have used the wrong URL.</li>
             </ol>
             </div>
             </div>

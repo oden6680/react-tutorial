@@ -7,7 +7,7 @@ import Pic3 from "../../../images/GD003.JPG";
 
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const Grodna = props => {
+const Grodno = props => {
     const images = [
         {
           original: Pic1,
@@ -34,4 +34,4 @@ const Grodna = props => {
     )
 }
 
-export default Grodna
+export default Grodno

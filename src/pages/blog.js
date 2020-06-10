@@ -8,11 +8,11 @@ const Blog = props => {
     return (
         <section className = "section">
             <div className = "container">
-            <h1 className = "title">About</h1>
-            <p>
-                This is a page of places I've traveled to, with my thoughts on them. I hope my articles will help you with your future travels.
-            </p>
-            <br></br>
+                <h1 className = "title">About</h1>
+                <p>
+                    This is a page of places I've traveled to, with my thoughts on them. I hope my articles will help you with your future travels.
+                </p>
+                <br></br>
             </div>
 
             <div className = "container">
@@ -140,7 +140,7 @@ const Blog = props => {
                                 <li>Belarus
                                     <ul>
                                         <u><b><Link to = '/blog/minsk'>Minsk</Link></b></u>
-                                        <u><b><Link to = '/blog/grodna'>Grodna</Link></b></u>
+                                        <u><b><Link to = '/blog/grodno'>Grodno</Link></b></u>
                                         <u><b><Link to = '/blog/brest'>Brest</Link></b></u>
                                     </ul>
                                 </li>

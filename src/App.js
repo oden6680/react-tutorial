@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import logo from "./images/head.jpeg";
 import Top from "./pages/top";
 import Blog from "./pages/blog";
-import Gallary from "./pages/gallary";
+import Gallery from "./pages/gallery";
 import Profile from "./pages/profile";
 
 import Hokkaido from "./pages/blog/japan/hokkaido_tohoku/hokkaido";
@@ -14,7 +14,7 @@ import Shizuoka from "./pages/blog/japan/tyubu/shizuoka";
 import Nagano from "./pages/blog/japan/tyubu/nagano";
 
 import Minsk from "./pages/blog/belarus/minsk";
-import Grodna from "./pages/blog/belarus/grodna";
+import Grodno from "./pages/blog/belarus/grodno";
 import Brest from "./pages/blog/belarus/brest";
 
 import Notfound from "./pages/blog/nonedeta";
@@ -50,7 +50,7 @@ const App = () => {
                 <ul>
                   <TabLink to = '/' exact>Top</TabLink>
                   <TabLink to = '/blog'>Blog</TabLink>
-                  <TabLink to = '/gallary'>Gallary</TabLink>
+                  <TabLink to = '/gallery'>Gallery</TabLink>
                   <TabLink to = '/profile'>Profile</TabLink>
                 </ul>
               </div>
@@ -63,7 +63,7 @@ const App = () => {
           <Switch>
             <Route exact path = "/" component = {Top}/>
             <Route exact path = "/blog" component = {Blog}/>
-            <Route exact path = "/gallary" component = {Gallary}/>
+            <Route exact path = "/gallery" component = {Gallery}/>
             <Route exact path = "/profile" component = {Profile}/>
 
             <Route exact path = "/blog/hokkaido" component = {Hokkaido}/>
@@ -120,7 +120,7 @@ const App = () => {
             <Route exact path = "/blog/okinawa" component = {Notfound}/>
 
             <Route exact path = "/blog/minsk" component = {Minsk}/>
-            <Route exact path = "/blog/grodna" component = {Grodna}/>
+            <Route exact path = "/blog/grodno" component = {Grodno}/>
             <Route exact path = "/blog/brest" component = {Brest}/>
           </Switch>
         </div>
