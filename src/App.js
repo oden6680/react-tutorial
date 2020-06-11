@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import logo from "./images/head.jpeg";
 import Top from "./pages/top";
@@ -37,7 +37,7 @@ const TabLink = ({ to, children, exact }) => (
 
 const App = () => {
   return (
-    <Router>
+    <Router hashType = "noslash">
     <div>
       <section className = "hero is-primary is-bold is-medium">
 
