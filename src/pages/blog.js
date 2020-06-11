@@ -9,8 +9,9 @@ const Blog = props => {
         <section className = "section">
             <div className = "container">
                 <h1 className = "title">About</h1>
-                <p>
-                    This is a page of places I've traveled to, with my thoughts on them. I hope my articles will help you with your future travels.
+                <p className = "container is-size-4">
+                This is a page of places I've traveled to, with my thoughts on them. I hope my articles will help you with your future travels.<br></br>
+                On this page you can read my thoughts about the places I have travelled to. I hope, that my articles will help you to plan future journeys.
                 </p>
                 <br></br>
             </div>

@@ -4,9 +4,9 @@ const Top = props => (
     <section className = "section">
         <div className = "container">
             <h2 className = "title">Top</h2>
-            <h3 className = "subtitle">
+            <p className = "container is-size-4">
                 This page is Naoya's personal website.
-            </h3>
+            </p>
         </div>
     </section>
 )

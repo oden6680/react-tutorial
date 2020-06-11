@@ -18,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/oden6680/react-tutorial/issues"
   },
-  "homepage": "https://oden6680.github.io/react-tutorial/",
   "dependencies": {
     "bulma": "^0.9.0",
     "react": "^16.13.1",

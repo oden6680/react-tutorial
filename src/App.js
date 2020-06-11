@@ -40,8 +40,9 @@ const App = () => {
     <Router>
     <div>
       <section className = "hero is-primary is-bold is-medium">
+
         <div className = "hero-head">
-          <img src = {logo}></img>
+          <img src = {logo} alt = "head"></img>
         </div>
 
         <div className = "hero-foot">
@@ -56,6 +57,7 @@ const App = () => {
               </div>
             </nav>
         </div>
+
       </section>
 
       <section className = "section has-background-success-light">
@@ -135,6 +137,7 @@ const App = () => {
           </div>
         </div>
       </footer>
+
     </div>
     </Router>
   );
