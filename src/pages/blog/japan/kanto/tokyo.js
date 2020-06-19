@@ -25,7 +25,7 @@ const MakeArticle = ({ data }) => {
           <div className = "title">{data.contents[i].title}</div>
           <div className = "columns">
               <div className = "column is-half">
-                <img src = {data.contents[i].picture.url} alt = "picture"></img>
+                <img src = {data.contents[i].picture.url} alt = "myphoto"></img>
               </div>
               <div className = "column is-half">
                 <div dangerouslySetInnerHTML = {{ __html: data.contents[i].text}}/>
