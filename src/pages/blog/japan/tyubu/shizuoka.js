@@ -34,7 +34,7 @@ const Shizuoka = props => {
             <h2 className = "title">Shizuoka</h2>
             <br></br>
         </div>
-        <ImageGallery items = {images} disableSwipe = {true} autoPlay = {true}/>
+        <ImageGallery items = {images} disableSwipe = {true} />
         </section>
     )
 }

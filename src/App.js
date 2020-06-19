@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import logo from "./images/head.jpeg";
 import Top from "./pages/top";
@@ -35,7 +35,36 @@ const TabLink = ({ to, children, exact }) => (
   />
 )
 
+const Content = ({ data }) => {
+  if (data == null) {
+    return (
+      <div className="content">
+        <p></p>
+      </div>
+    );
+  }
+  return (
+    <div>
+      <div dangerouslySetInnerHTML = {{ __html: data.contents[0].text}}/>
+    </div>
+  );
+};
+
 const App = () => {
+
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch("https://number-oden.microcms.io/api/v1/404pic",{
+    headers: {
+      'X-API-KEY': '5ce57513-daef-47b5-af3e-7436ffb07062'
+    },
+  })
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
+
   return (
     <Router hashType = "noslash">
     <div>
@@ -62,6 +91,7 @@ const App = () => {
 
       <section className = "section has-background-success-light">
         <div className = "container ">
+        <Content data = {data} />
           <Switch>
             <Route exact path = "/" component = {Top}/>
             <Route exact path = "/blog" component = {Blog}/>
@@ -69,61 +99,18 @@ const App = () => {
             <Route exact path = "/profile" component = {Profile}/>
 
             <Route exact path = "/blog/hokkaido" component = {Hokkaido}/>
-            <Route exact path = "/blog/aomori" component = {Notfound}/>
-            <Route exact path = "/blog/akita" component = {Notfound}/>
-            <Route exact path = "/blog/iwate" component = {Notfound}/>
-            <Route exact path = "/blog/yamagata" component = {Notfound}/>
-            <Route exact path = "/blog/miyagi" component = {Notfound}/>
             <Route exact path = "/blog/fukushima" component = {Fukushima}/>
 
-            <Route exact path = "/blog/gunma" component = {Notfound}/>
-            <Route exact path = "/blog/tochigi" component = {Notfound}/>
-            <Route exact path = "/blog/ibaraki" component = {Notfound}/>
-            <Route exact path = "/blog/saitama" component = {Notfound}/>
             <Route exact path = "/blog/tokyo" component = {Tokyo}/>
-            <Route exact path = "/blog/chiba" component = {Notfound}/>
-            <Route exact path = "/blog/kanagawa" component = {Notfound}/>
 
-            <Route exact path = "/blog/nigata" component = {Notfound}/>
             <Route exact path = "/blog/shizuoka" component = {Shizuoka}/>
-            <Route exact path = "/blog/yamanashi" component = {Notfound}/>
             <Route exact path = "/blog/nagano" component = {Nagano}/>
-            <Route exact path = "/blog/toyama" component = {Notfound}/>
-            <Route exact path = "/blog/ishikawa" component = {Notfound}/>
-            <Route exact path = "/blog/fukui" component = {Notfound}/>
-            <Route exact path = "/blog/gifu" component = {Notfound}/>
-            <Route exact path = "/blog/aichi" component = {Notfound}/>
-
-            <Route exact path = "/blog/osaka" component = {Notfound}/>
-            <Route exact path = "/blog/kyoto" component = {Notfound}/>
-            <Route exact path = "/blog/nara" component = {Notfound}/>
-            <Route exact path = "/blog/mie" component = {Notfound}/>
-            <Route exact path = "/blog/wakayama" component = {Notfound}/>
-            <Route exact path = "/blog/shiga" component = {Notfound}/>
-            <Route exact path = "/blog/hyogo" component = {Notfound}/>
-
-            <Route exact path = "/blog/totori" component = {Notfound}/>
-            <Route exact path = "/blog/shimane" component = {Notfound}/>
-            <Route exact path = "/blog/hiroshima" component = {Notfound}/>
-            <Route exact path = "/blog/okayama" component = {Notfound}/>
-            <Route exact path = "/blog/yamaguchi" component = {Notfound}/>
-            <Route exact path = "/blog/kagawa" component = {Notfound}/>
-            <Route exact path = "/blog/tokushima" component = {Notfound}/>
-            <Route exact path = "/blog/ehime" component = {Notfound}/>
-            <Route exact path = "/blog/kochi" component = {Notfound}/>
-
-            <Route exact path = "/blog/fukuoka" component = {Notfound}/>
-            <Route exact path = "/blog/nagasaki" component = {Notfound}/>
-            <Route exact path = "/blog/kagoshima" component = {Notfound}/>
-            <Route exact path = "/blog/kumamoto" component = {Notfound}/>
-            <Route exact path = "/blog/saga" component = {Notfound}/>
-            <Route exact path = "/blog/oita" component = {Notfound}/>
-            <Route exact path = "/blog/miyazaki" component = {Notfound}/>
-            <Route exact path = "/blog/okinawa" component = {Notfound}/>
 
             <Route exact path = "/blog/minsk" component = {Minsk}/>
             <Route exact path = "/blog/grodno" component = {Grodno}/>
             <Route exact path = "/blog/brest" component = {Brest}/>
+
+            <Route path = "*" component = {Notfound}/>
           </Switch>
         </div>
       </section>  

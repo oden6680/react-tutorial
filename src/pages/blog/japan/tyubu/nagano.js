@@ -24,7 +24,7 @@ const Nagano = props => {
             <h2 className = "title">Nagano</h2>
             <br></br>
         </div>
-        <ImageGallery items = {images} disableSwipe = {true} autoPlay = {true}/>
+        <ImageGallery items = {images} disableSwipe = {true} />
         </section>
     )
 }
