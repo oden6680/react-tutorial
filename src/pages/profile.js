@@ -9,7 +9,7 @@ const Profile = props => (
                 <div className = "column is-2">
                     <h2 className = "title">Profile</h2>
                     <figure className = "image is-128x128">
-                        <img src = {pro}></img>
+                        <img src = {pro} alt = "myface" ></img>
                     </figure>
                 </div>
 
