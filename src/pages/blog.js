@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import Japan from "../images/japan.png";
 import Belarus from "../images/belarus.png";
 
-const Blog = props => {
+const Blog = () => {
     return (
         <section className = "section">
             <div className = "container">

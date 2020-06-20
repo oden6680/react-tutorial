@@ -5,8 +5,7 @@ import Brest from "../images/BS001.JPG";
 import Minsk from "../images/MS001.JPG";
 import Grodna from "../images/GD001.jpeg";
 import Hokkaido from "../images/HK001.JPG";
-import Fukushima from "../images/FK001.JPG";
-import Tokyo from "../images/TK001.JPG";
+import Fukushima from "../images/FK001.JPG"
 import Shizuoka from "../images/SZ001.JPG";
 import Nagano from "../images/NG001.JPG";
 
@@ -33,10 +32,6 @@ const Gallery = () => {
         {
           original: Fukushima,
           thumbnail: Fukushima,
-        },
-        {
-          original: Tokyo,
-          thumbnail: Tokyo,
         },
         {
           original: Shizuoka,

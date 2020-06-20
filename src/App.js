@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-import logo from "./images/head.jpeg";
+import Logo from "./images/logo.png"
+import Background from "./images/background.png"
+
 import Top from "./pages/top";
 import Blog from "./pages/blog";
 import Gallery from "./pages/gallery";
@@ -35,43 +37,20 @@ const TabLink = ({ to, children, exact }) => (
   />
 )
 
-const Content = ({ data }) => {
-  if (data == null) {
-    return (
-      <div className="content">
-        <p></p>
-      </div>
-    );
-  }
-  return (
-    <div>
-      <div dangerouslySetInnerHTML = {{ __html: data.contents[0].text}}/>
-    </div>
-  );
-};
+const style = { backgroundImage:`url(${Background})`}
 
 const App = () => {
-
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    fetch("https://number-oden.microcms.io/api/v1/404pic",{
-    headers: {
-      'X-API-KEY': '5ce57513-daef-47b5-af3e-7436ffb07062'
-    },
-  })
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
-
   return (
     <Router hashType = "noslash">
     <div>
-      <section className = "hero is-primary is-bold is-medium">
+      <section className = "hero is-primary">
 
-        <div className = "hero-head">
-          <img src = {logo} alt = "head"></img>
+        <div className = "hero-body" style = {style}>
+          <div className = 'container'>
+            <div className = 'content has-text-centered'>
+              <img src = { Logo } alt = "logo" />
+            </div>
+          </div>
         </div>
 
         <div className = "hero-foot">
@@ -91,7 +70,6 @@ const App = () => {
 
       <section className = "section has-background-success-light">
         <div className = "container ">
-        <Content data = {data} />
           <Switch>
             <Route exact path = "/" component = {Top}/>
             <Route exact path = "/blog" component = {Blog}/>

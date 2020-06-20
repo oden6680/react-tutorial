@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ImageGallery from 'react-image-gallery';
 
-import Pic1 from "../../../../images/TK001.JPG";
-import Pic2 from "../../../../images/TK002.JPG";
-import Pic3 from "../../../../images/TK003.JPG";
-import Pic4 from "../../../../images/TK004.JPG";
-import Pic5 from "../../../../images/TK005.JPG";
-
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const MakeArticle = ({ data }) => {
@@ -43,54 +37,49 @@ const MakeArticle = ({ data }) => {
   );
 }
 
-const Tokyo = () => {
-    const images = [
-        {
-          original: Pic1,
-          thumbnail: Pic1,
-        },
-        {
-          original: Pic2,
-          thumbnail: Pic2,
-        },
-        {
-          original: Pic3,
-          thumbnail: Pic3,
-        },
-        {
-          original: Pic4,
-          thumbnail: Pic4,
-        },
-        {
-          original: Pic5,
-          thumbnail: Pic5,
-        },
-    ];
-    
-    const [data, setData] = useState(null);
-    useEffect(() => {
-      fetch("https://number-oden.microcms.io/api/v1/blog",{
-      headers: {
-        'X-API-KEY': '5ce57513-daef-47b5-af3e-7436ffb07062'
+const setImages = ({ data }) =>{
+  var items = []
+  if (data == null){
+    return items
+  }
+  for(let i = 0; i < data.contents.length; i++){
+    items.push(
+      {
+        original: data.contents[i].picture.url,
+        thumbnail: data.contents[i].picture.url,
       },
-    })
-        .then((response) => response.json())
-        .then((data) => {
-          setData(data);
-        });
-    }, []);
+    )
+  }
+  return items 
+}
 
-    return (
-        <section className = "section">
-          <div className = "container">
-              <h2 className = "title">Tokyo</h2>
-              <br></br>
-          </div>
-          <ImageGallery items = {images} disableSwipe = {true} />
-            <div className = "container">
-              <MakeArticle data = {data} />
-            </div> 
-        </section>
+const Tokyo = () => {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch("https://number-oden.microcms.io/api/v1/blog",{
+    headers: {
+      'X-API-KEY': '5ce57513-daef-47b5-af3e-7436ffb07062'
+    },
+  })
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
+
+  const images = setImages({ data })
+
+  return (
+      <section className = "section">
+        <div className = "container">
+            <h2 className = "title">Tokyo</h2>
+            <br></br>
+        </div>
+        <ImageGallery items = {images} disableSwipe = {true} />
+        <div className = "container">
+          <MakeArticle data = {data} />
+        </div> 
+      </section>
     )
 }
 
