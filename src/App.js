@@ -2,7 +2,7 @@ import React from "react";
 import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Logo from "./images/logo.png"
-import Background from "./images/background.png"
+import Background from "./images/background.jpg"
 
 import Top from "./pages/top";
 import Blog from "./pages/blog";
