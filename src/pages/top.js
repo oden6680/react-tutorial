@@ -12,18 +12,18 @@ const MakeArticle = ({ data }) => {
     var list = []
     for(let i = 0; i < data.contents.length; i++){
         list.push(
-          <section className = "section">
-            <div className = "title">
+          <div>
+            <h2 className = "title">
                 {data.contents[i].title}
-            </div>
-            <div className = "subtitle">
+            </h2>
+            <h3 className = "subtitle">
                 {data.contents[i].createdAt.substr(0,10)}
-            </div>
+            </h3>
             <p>
                 <div dangerouslySetInnerHTML = {{ __html: data.contents[i].text}}/>
             </p>
             <hr></hr>
-          </section>
+          </div>
         );
     }
   
@@ -51,8 +51,19 @@ const Top = () => {
     return (
         <section className = "section">
             <div className = "container">
-                <h1 className = "title">Updare Information</h1>
-                <MakeArticle data = { data } />
+                <div className = "content">
+                    <h1 className = "title">About</h1>
+                        <div>
+                            <h2 className = "title">номер одeнとは？</h2>
+                            <p>このWEBサイトの名前である"номер одeн"はロシア語の単語からの造語です。
+                                英語の"number one"が語源になっており、これはロシア語で"номер один"と表します。<br></br>
+                                そこへ"один"の部分を、僕のあだ名である"おでん"をロシア語で表記した"одeн"と入れ替えて作られた名前です。</p>
+                        </div>
+                </div>
+                <div className = "content">
+                    <h1 className = "title">Updare Information</h1>
+                    <MakeArticle data = { data } />
+                </div>
             </div>
         </section>
     )

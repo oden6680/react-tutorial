@@ -27,8 +27,8 @@ const TabLink = ({ to, children, exact }) => (
     exact = {exact}
     children = {({ match }) => {
       return (
-        <li className = {match ? 'is-active' : ''}>
-          <Link to = {to} style = {{ color: match ? 'rgb(32,88,90)' : 'white' }}>
+        <li className = {match ? 'has-background-success-light' : 'is-active'}>
+          <Link to = {to} style = {{ color:'black' }}>
             {children}
           </Link>
         </li>
@@ -43,9 +43,9 @@ const App = () => {
   return (
     <Router hashType = "noslash">
     <div>
-      <section className = "hero is-primary">
+      <section className = "hero is-primary"　style = {style}>
 
-        <div className = "hero-body" style = {style}>
+        <div className = "hero-body">
           <div className = 'container'>
             <div className = 'content has-text-centered'>
               <img src = { Logo } alt = "logo" />
@@ -54,7 +54,7 @@ const App = () => {
         </div>
 
         <div className = "hero-foot">
-            <nav className = "tabs is-boxed is-fullwidth ">
+            <nav className = "tabs is-boxed is-fullwidth">
               <div className = "container">
                 <ul>
                   <TabLink to = '/' exact>Top</TabLink>
