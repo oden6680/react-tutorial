@@ -10,10 +10,15 @@ const Profile = props => (
                 <h2 className = "title">織田尚哉</h2>
                 <h3 className = "subtitle"><i>NAOYA ODA</i></h3>
                     <img src = {pro} alt = "myface" ></img>
+                
+                <p className = 'menu-label'>SNS</p>
+                <ul className = 'menu-list'>
+                    <li><a href="/basicinformation">Basic Information</a></li>
+                </ul>
                 </div>
 
                 <div className = 'column is-three-fifths'>
-                    <h2 className = "title">Basic Information</h2>
+                    <h2 id = "basicinformation">Basic Information</h2>
                     <hr></hr>
                 </div>
 
