@@ -61,7 +61,7 @@ const Top = () => {
                         </div>
                 </div>
                 <div className = "content">
-                    <h1 className = "title">Updare Information</h1>
+                    <h1 className = "title">Update Information</h1>
                     <MakeArticle data = { data } />
                 </div>
             </div>

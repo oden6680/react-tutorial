@@ -6,16 +6,15 @@ const Profile = props => (
         <div className = "container">
             <div className = "columns">
 
-                <div className = "column is-2">
-                    <h2 className = "title">Profile</h2>
-                    <figure className = "image is-128x128">
-                        <img src = {pro} alt = "myface" ></img>
-                    </figure>
+                <div className = "column is-3">
+                <h2 className = "title">織田尚哉</h2>
+                <h3 className = "subtitle"><i>NAOYA ODA</i></h3>
+                    <img src = {pro} alt = "myface" ></img>
                 </div>
 
                 <div className = 'column is-three-fifths'>
-                    <br></br>
-                    <h1 className = "title">織田尚哉</h1>
+                    <h2 className = "title">Basic Information</h2>
+                    <hr></hr>
                 </div>
 
                 <div className = 'column is-3'>
